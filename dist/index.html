@@ -8,41 +8,43 @@
 </head>
 <body>
     <nav class="nav-container">
-        <h1 class="nav-project-name">Potterland</h1>
+        <h1 class="nav-project-name">
+            <a href="index.html">Potterland</a>
+        </h1>
         <ul class="nav-list">
-            <li class="nav-list-item">Characters</li>
-            <li class="nav-list-item">Houses</li>
-            <li class="nav-list-item">Spells</li>
-            <li class="nav-list-item">Potions</li>
-            <li class="nav-list-item">Search</li>
+            <li class="nav-list-item nav-item" data-id="characters">Characters</li>
+            <li class="nav-list-item nav-item" data-id="spells">Spells</li>
+            <li class="nav-list-item nav-item" data-id="potions">Potions</li>
+            <li class="nav-list-item nav-item" data-id="favourites">Favourites</li>
         </ul>
     </nav>
 
-    <section class="greeting-container">
-        <h1 class="greeting"></h1>
-    </section>
-    <section class="characters-container d-none">
-        <h2>characters</h2> 
-    </section>
+    <h2 class="greeting"></h2>
 
-    <section class="houses-container d-none">
-        <h2>houses</h2>
+    <section class="characters-section section d-none" id="charactersSection">
+        <div class="characters-content"></div>
+        <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
     </section>
-
-    <section class="spells-container d-none">
-        <h2>spells</h2>
+    
+    <section class="spells-section section d-none" id="spellsSection">
+        <div class="content-wrapper">
+            <div class="spells-content"></div>
+            <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
+        </div>
     </section>
+    
+    <section class="potions-section section d-none" id="potionsSection">
+        <div class="content-wrapper">
+            <div class="potions-content"></div>
+            <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
+        </div>
+    </section>    
 
-    <section class="potions-container d-none">
-        <h2>potions</h2>
-    </section>
-
-    <section class="search-container d-none">
-
-        <h2>Search Characters</h2>
-        <!-- <h2>Search Characters</h2>
-        <input type="text" id="searchInput" placeholder="Search characters..." />
-        <ul id="characterList"></ul> -->
+    <section class="favourites-container d-none" id="favouritesSection">
+        <div class="content-wrapper">
+            <div class="favourites-content"></div>
+            <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
+        </div>
     </section>
 
     <script src="./index.js"></script>
